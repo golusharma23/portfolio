@@ -6,104 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: rgba(2,6,23,0.85);
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 28px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .project-title {
+            font-size: 24px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .project-role {
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: #e2e8f0;
+        }
+
+        .project-desc {
+            color: #94a3b8;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            font-size: 14px;
+            color: #cbd5f5;
+            margin: 16px 0;
+        }
+
+        .project-btn {
+            margin-top: 18px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">Golu Sharma</div>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="container nav-container">
+        <div class="logo">Golu Sharma</div>
 
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- ================= PROJECTS SECTION ================= -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Projects</h1>
+<!-- ================= PROJECTS ================= -->
+<section class="hero">
+    <div class="container hero-content">
+        <h1>Projects</h1>
+        <p class="intro">
+            A selection of backend-focused projects demonstrating
+            real-world problem solving and clean application logic.
+        </p>
+
+        <div class="projects-grid">
 
             <!-- PROJECT 1 -->
-            <h2>Camera Based Attendance System</h2>
-            <p class="role">Backend Application</p>
+            <div class="project-card">
+                <h2 class="project-title">Camera Based Attendance System</h2>
+                <p class="project-role">Backend Application</p>
 
-            <p class="intro">
-                A backend-focused attendance management system designed to automate
-                the attendance process and reduce manual effort.
-            </p>
+                <p class="project-desc">
+                    Designed and developed a backend system to automate attendance
+                    processing using REST APIs and a layered Spring Boot architecture.
+                </p>
 
-            <p class="intro">
-                The system processes attendance data through REST APIs,
-                applies business logic in the service layer,
-                and stores records in a structured database.
-            </p>
+                <p class="project-desc">
+                    The system handles attendance data, applies business logic
+                    in the service layer, and stores records in a database.
+                </p>
 
-            <p class="intro">
-                Technologies used include Java, Spring Boot, Spring Data JPA,
-                Hibernate, and an in-memory database for development and testing.
-            </p>
+                <p class="tech-stack">
+                    <strong>Tech Stack:</strong>
+                    Java · Spring Boot · Spring Data JPA · Hibernate · H2 Database
+                </p>
 
-            <a href="https://github.com/golusharma23/camera-attendance-system"
-               target="_blank"
-               class="btn primary">
-               View on GitHub
-            </a>
-
-            <hr style="margin:40px 0; border-color:#1e293b;">
+                <a href="https://github.com/golusharma23/camera-attendance-system"
+                   target="_blank"
+                   class="btn primary project-btn">
+                   View on GitHub
+                </a>
+            </div>
 
             <!-- PROJECT 2 -->
-            <h2>ATM Management System</h2>
-            <p class="role">Backend Application</p>
+            <div class="project-card">
+                <h2 class="project-title">Employee Payroll Management System</h2>
+                <p class="project-role">Core Java Application</p>
 
-            <p class="intro">
-                A backend system that simulates basic ATM operations such as
-                balance inquiry, withdrawal, deposit, and transaction handling.
-            </p>
+                <p class="project-desc">
+                    Developed a Java-based payroll system to manage employee records
+                    and salary calculations.
+                </p>
 
-            <p class="intro">
-                This project focuses on core backend logic, data handling,
-                and understanding real-world transaction workflows.
-            </p>
+                <p class="project-desc">
+                    This project demonstrates strong understanding of
+                    object-oriented programming and backend logic.
+                </p>
 
-            <a href="https://github.com/golusharma23"
-               target="_blank"
-               class="btn secondary">
-               View on GitHub
-            </a>
+                <p class="tech-stack">
+                    <strong>Tech Stack:</strong>
+                    Core Java · OOPs · Collections
+                </p>
 
-            <hr style="margin:40px 0; border-color:#1e293b;">
-
-            <!-- PROJECT 3 -->
-            <h2>Registration Form</h2>
-            <p class="role">Basic Application</p>
-
-            <p class="intro">
-                A simple registration form project built to understand
-                form handling, data validation, and basic application flow.
-            </p>
-
-        </div>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>© 2026 Golu Sharma. All rights reserved.</p>
-
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/mr-golu-sharma-43a545343" target="_blank">LinkedIn</a>
-                <a href="https://github.com/golusharma23" target="_blank">GitHub</a>
+                <a href="https://github.com/golusharma23/EmployeePayrollManagementSystem"
+                   target="_blank"
+                   class="btn secondary project-btn">
+                   View on GitHub
+                </a>
             </div>
+
         </div>
-    </footer>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container footer-content">
+        <p>© 2026 Golu Sharma. All rights reserved.</p>
+
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/mr-golu-sharma-43a545343" target="_blank">LinkedIn</a>
+            <a href="https://github.com/golusharma23" target="_blank">GitHub</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
