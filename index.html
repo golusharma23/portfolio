@@ -21,7 +21,6 @@
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <header class="navbar">
     <div class="container nav-container">
         <div class="logo">Golu Sharma</div>
@@ -38,7 +37,6 @@
     </div>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
     <div class="container hero-content" style="display:flex; align-items:center; gap:40px; flex-wrap:wrap;">
 
@@ -67,6 +65,8 @@
 
         <!-- RIGHT -->
         <div style="flex:1; min-width:260px; text-align:center;">
+
+            <!-- PROFILE IMAGE -->
             <img src="./assets/images/profile.jpg"
                  alt="Golu Sharma"
                  style="
@@ -79,24 +79,30 @@
                    margin-top:20px;
                  ">
 
-            <div id="clock"
-                 style="
-                    margin-top:25px;
-                    padding:16px 20px;
-                    background:rgba(2,6,23,0.85);
-                    border:1px solid #1e293b;
-                    border-radius:14px;
-                    font-size:18px;
-                    font-weight:600;
-                    box-shadow:0 10px 30px rgba(0,0,0,0.6);
-                 ">
-            </div>
-        </div>
+            <!-- DIGITAL CLOCK -->
+            <div style="margin-top:25px; font-family: 'Orbitron', monospace;">
+                <div id="full-date" style="font-size:14px; letter-spacing:2px; color:#38bdf8;"></div>
+                <div id="full-day" style="font-size:11px; letter-spacing:4px; color:#94a3b8; margin-bottom:10px;"></div>
 
+                <div id="clock-text"
+                     style="
+                        padding:18px 26px;
+                        background:#020617;
+                        border:2px solid #38bdf8;
+                        border-radius:14px;
+                        font-size:32px;
+                        font-weight:900;
+                        color:#ffffff;
+                        text-shadow:0 0 12px #38bdf8;
+                        box-shadow:0 0 30px rgba(56,189,248,0.35);
+                     ">
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <div class="container footer-content">
         <p>© <span id="year"></span> Golu Sharma. All rights reserved.</p>
@@ -111,17 +117,26 @@
     </div>
 </footer>
 
-<!-- ================= SCRIPT ================= -->
 <script>
     function updateClock() {
         const now = new Date();
-        document.getElementById("clock").innerHTML =
-            now.toLocaleTimeString() + "<br>" + now.toDateString();
+
+        const h = String(now.getHours()).padStart(2, '0');
+        const m = String(now.getMinutes()).padStart(2, '0');
+        const s = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById("clock-text").innerText = `${h}:${m}:${s}`;
+
+        document.getElementById("full-date").innerText =
+            now.toLocaleDateString('en-GB', { day:'2-digit', month:'short', year:'numeric' }).toUpperCase();
+
+        document.getElementById("full-day").innerText =
+            now.toLocaleDateString('en-GB', { weekday:'long' }).toUpperCase();
+
+        document.getElementById("year").innerText = now.getFullYear();
     }
+
     setInterval(updateClock, 1000);
     updateClock();
-
-    document.getElementById("year").innerText = new Date().getFullYear();
 </script>
 
 </body>
