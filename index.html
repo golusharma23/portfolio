@@ -6,99 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="Portfolio of Golu Sharma, Backend Developer specializing in Java, Spring Boot, REST APIs, and database-driven systems. Open for internships 2026.">
-    <meta name="keywords" content="Golu Sharma, Backend Developer, Java, Spring Boot, Portfolio">
+    <meta name="description" content="Golu Sharma – Backend Developer specializing in Java, Spring Boot, REST APIs, and scalable backend systems.">
+    <meta name="keywords" content="Golu Sharma, Backend Developer, Java, Spring Boot">
 
     <!-- Google Verification -->
     <meta name="google-site-verification" content="nY67drhcT9awJ-m-eDGLauz0xqDrM0OcQQtqp5oKDLc" />
 
-    <!-- Main CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Font for Clock -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
-
     <style>
-        /* Hero fine tuning (safe overrides) */
-        .hero {
-            padding: 110px 0 90px;
+        .hero-full {
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            background:
+                radial-gradient(circle at top right, rgba(56,189,248,.15), transparent 60%),
+                radial-gradient(circle at bottom left, rgba(14,165,233,.12), transparent 60%);
         }
-
-        .hero h2 {
-            line-height: 1.1;
-            margin-bottom: 10px;
+        .hero-grid {
+            display:grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap:80px;
+            align-items:center;
         }
-
-        .identity-box {
-            background: rgba(2,6,23,0.85);
-            border: 1px solid #1e293b;
-            border-radius: 20px;
-            padding: 30px 25px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-            display: inline-block;
-            animation: float 6s ease-in-out infinite;
+        .tagline {
+            letter-spacing:3px;
+            font-size:13px;
+            color:#94a3b8;
         }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-            100% { transform: translateY(0); }
+        .big-name {
+            font-size:64px;
+            margin:10px 0;
         }
-
-        .glow-ring {
-            border-radius: 50%;
-            padding: 6px;
-            background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-            display: inline-block;
-            box-shadow: 0 0 35px rgba(56,189,248,0.6);
+        .role {
+            color:#38bdf8;
+            font-size:24px;
+            margin-bottom:20px;
         }
-
-        .profile-img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #020617;
+        .stats {
+            display:flex;
+            gap:40px;
+            margin-top:35px;
         }
-
-        .clock-box {
-            margin-top: 20px;
-            padding: 16px 22px;
-            border-radius: 14px;
-            border: 2px solid #38bdf8;
-            font-family: 'Orbitron', monospace;
-            box-shadow: 0 0 25px rgba(56,189,248,0.35);
+        .stat h2 { color:#38bdf8; margin:0; }
+        .stat p { font-size:13px; color:#94a3b8; }
+        .card {
+            background:rgba(2,6,23,.85);
+            border:1px solid #1e293b;
+            border-radius:26px;
+            padding:40px;
+            text-align:center;
+            box-shadow:0 25px 60px rgba(0,0,0,.8);
         }
-
-        .clock-time {
-            font-size: 34px;
-            font-weight: 900;
-            color: #ffffff;
-            text-shadow: 0 0 12px #38bdf8;
+        .trust-strip {
+            margin-top:80px;
+            padding:30px 0;
+            border-top:1px solid #1e293b;
+            display:flex;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            gap:20px;
+            font-size:14px;
+            color:#94a3b8;
         }
-
-        .clock-date {
-            font-size: 12px;
-            letter-spacing: 3px;
-            color: #38bdf8;
-            margin-top: 6px;
-        }
-
-        .clock-day {
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: #94a3b8;
-            margin-top: 4px;
+        @media(max-width:900px){
+            .hero-grid{grid-template-columns:1fr;}
+            .big-name{font-size:48px;}
         }
     </style>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <header class="navbar">
     <div class="container nav-container">
         <div class="logo">Golu Sharma</div>
@@ -115,54 +95,82 @@
     </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-    <div class="container hero-content" style="display:flex; align-items:center; gap:60px; flex-wrap:wrap;">
+<section class="hero-full">
+    <div class="container hero-grid">
 
         <!-- LEFT -->
-        <div style="flex:1; min-width:300px;">
-            <h1>Hello, I’m</h1>
-            <h2 style="font-size:58px;">Golu Sharma</h2>
-            <p class="role">Backend Developer</p>
+        <div>
+            <p class="tagline">WELCOME TO MY PORTFOLIO</p>
+            <h1 class="big-name">Golu Sharma</h1>
+            <div class="role">Backend Developer</div>
 
             <p class="intro">
-                Backend Developer specialized in building reliable server-side systems,
-                REST APIs, and database-driven applications using Java & Spring Boot.
+                I design and build <b>robust backend systems</b>,
+                scalable REST APIs, and database-driven applications
+                with a strong focus on logic, performance, and clean architecture.
             </p>
 
-            <p class="intro">
-                ▸ Backend Development & API Design<br>
-                ▸ Logic Building & Problem Solving<br>
-                ▸ Open for Internships 2026
-            </p>
+            <ul style="margin-top:25px; line-height:2;">
+                <li>▸ Java & Spring Boot Backend</li>
+                <li>▸ REST APIs & Database Design</li>
+                <li>▸ Logic Building & Problem Solving</li>
+                <li>▸ Open for Internships – 2026</li>
+            </ul>
 
-            <div class="hero-buttons" style="margin-top:28px;">
-                <a href="./pages/projects.html" class="btn primary">View Projects</a>
-                <a href="./pages/contact.html" class="btn secondary">Contact Me</a>
+            <div class="stats">
+                <div class="stat">
+                    <h2>5+</h2>
+                    <p>Certifications</p>
+                </div>
+                <div class="stat">
+                    <h2>3+</h2>
+                    <p>Projects</p>
+                </div>
+                <div class="stat">
+                    <h2>IT</h2>
+                    <p>Engineering</p>
+                </div>
+            </div>
+
+            <div class="hero-buttons" style="margin-top:40px;">
+                <a href="./pages/projects.html" class="btn primary">View Work</a>
+                <a href="./pages/contact.html" class="btn secondary">Contact</a>
             </div>
         </div>
 
         <!-- RIGHT -->
-        <div style="flex:1; min-width:280px; text-align:center;">
-            <div class="identity-box">
-                <div class="glow-ring">
-                    <img src="./assets/images/profile.jpg"
-                         alt="Golu Sharma"
-                         class="profile-img">
-                </div>
+        <div class="card">
+            <img src="./assets/images/profile.jpg"
+                 alt="Golu Sharma"
+                 style="width:220px;height:220px;border-radius:50%;border:4px solid #38bdf8;object-fit:cover;box-shadow:0 0 35px rgba(56,189,248,.7);">
 
-                <div class="clock-box">
-                    <div class="clock-time" id="clock-time">00:00:00</div>
-                    <div class="clock-date" id="clock-date">01 JAN 2026</div>
-                    <div class="clock-day" id="clock-day">WEDNESDAY</div>
+            <div style="margin-top:30px;font-family:Orbitron,monospace;">
+                <div id="full-date" style="font-size:14px;color:#38bdf8;"></div>
+                <div id="full-day" style="font-size:11px;letter-spacing:4px;color:#94a3b8;margin-bottom:12px;"></div>
+                <div id="clock-text" style="
+                    padding:18px 26px;
+                    border:2px solid #38bdf8;
+                    border-radius:14px;
+                    font-size:32px;
+                    font-weight:900;
+                    text-shadow:0 0 14px #38bdf8;">
                 </div>
             </div>
-        </div>
 
+            <p style="margin-top:22px;font-size:14px;color:#94a3b8;">
+                Building systems, not just code.
+            </p>
+        </div>
     </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<div class="container trust-strip">
+    <span>✔ Java & Spring Boot</span>
+    <span>✔ REST API Design</span>
+    <span>✔ Clean Architecture</span>
+    <span>✔ Database-Driven Systems</span>
+</div>
+
 <footer class="footer">
     <div class="container footer-content">
         <p>© <span id="year"></span> Golu Sharma. All rights reserved.</p>
@@ -177,25 +185,21 @@
     </div>
 </footer>
 
-<!-- ================= SCRIPT ================= -->
 <script>
-    function updateClock() {
-        const now = new Date();
-
-        const h = String(now.getHours()).padStart(2,'0');
-        const m = String(now.getMinutes()).padStart(2,'0');
-        const s = String(now.getSeconds()).padStart(2,'0');
-
-        document.getElementById("clock-time").innerText = `${h}:${m}:${s}`;
-        document.getElementById("clock-date").innerText =
-            now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase();
-        document.getElementById("clock-day").innerText =
-            now.toLocaleDateString('en-GB',{weekday:'long'}).toUpperCase();
-        document.getElementById("year").innerText = now.getFullYear();
-    }
-
-    setInterval(updateClock, 1000);
-    updateClock();
+function updateClock(){
+    const now=new Date();
+    const h=String(now.getHours()).padStart(2,'0');
+    const m=String(now.getMinutes()).padStart(2,'0');
+    const s=String(now.getSeconds()).padStart(2,'0');
+    document.getElementById("clock-text").innerText=`${h}:${m}:${s}`;
+    document.getElementById("full-date").innerText=
+        now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase();
+    document.getElementById("full-day").innerText=
+        now.toLocaleDateString('en-GB',{weekday:'long'}).toUpperCase();
+    document.getElementById("year").innerText=now.getFullYear();
+}
+setInterval(updateClock,1000);
+updateClock();
 </script>
 
 </body>
