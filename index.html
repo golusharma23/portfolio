@@ -1,191 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Golu Sharma – Backend Developer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Golu Sharma | Java Backend Developer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+  content="Portfolio of Golu Sharma – Java Backend Developer specialized in Spring Boot, REST APIs, JDBC, SQL, and backend architecture.">
+  <meta name="keywords" content="Java, Spring Boot, REST API, JDBC, Backend Developer, Golu Sharma">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<meta name="description"
-content="Golu Sharma is a Java Backend Developer focused on Spring Boot, REST APIs, database design, and clean backend architecture.">
+  <style>
+    body {
+      background: #020617;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
 
-<link rel="stylesheet" href="./assets/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    .hero-full {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at top right, rgba(56,189,248,.18), transparent 60%);
+    }
 
-<style>
-/* ===== HERO ===== */
-.hero-full{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  background:
-    radial-gradient(circle at top right, rgba(56,189,248,.18), transparent 60%),
-    radial-gradient(circle at bottom left, rgba(14,165,233,.15), transparent 60%);
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.4fr 1fr;
-  gap:80px;
-}
-.big-name{font-size:64px;margin:0;}
-.role{color:#38bdf8;font-size:24px;margin:12px 0 22px;}
-.tagline{letter-spacing:3px;font-size:13px;color:#94a3b8;}
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-.stats{display:flex;gap:40px;margin-top:40px;}
-.stat h2{margin:0;color:#38bdf8;}
-.stat p{font-size:13px;color:#94a3b8;}
+    .big-name { font-size: 64px; margin: 0; }
+    .role { color: #38bdf8; font-size: 24px; margin: 12px 0 22px; }
+    .tagline { letter-spacing: 3px; font-size: 13px; color: #94a3b8; }
 
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;}
-  .big-name{font-size:46px;}
-}
+    .stats { display: flex; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+    .stat h2 { margin: 0; color: #38bdf8; }
+    .stat p { font-size: 13px; color: #94a3b8; }
 
-/* ===== FLOATING CLOCK ===== */
-.floating-clock{
-  position:fixed;
-  top:110px;
-  right:30px;
-  z-index:50;
-  width:170px;
-  height:170px;
-  border-radius:50%;
-  background:radial-gradient(circle,#020617 55%,transparent 56%);
-  border:2px solid #38bdf8;
-  box-shadow:0 0 30px rgba(56,189,248,.45);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  animation:float 6s ease-in-out infinite;
-}
-@keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-12px);}
-}
-.clock-inner{
-  text-align:center;
-  font-family:Orbitron,monospace;
-}
-.clock-time{
-  font-size:22px;
-  font-weight:700;
-  text-shadow:0 0 10px #38bdf8;
-}
-.clock-date{
-  font-size:11px;
-  letter-spacing:2px;
-  color:#94a3b8;
-  margin-top:6px;
-}
-</style>
+    .floating-clock {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #020617 55%, transparent 56%);
+      border: 2px solid #38bdf8;
+      box-shadow: 0 0 25px rgba(56,189,248,.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .clock-inner { text-align: center; font-family: Orbitron, monospace; }
+    .clock-time { font-size: 20px; font-weight: 700; text-shadow: 0 0 10px #38bdf8; }
+    .clock-date { font-size: 11px; letter-spacing: 2px; color: #94a3b8; margin-top: 6px; }
+
+    .tech-section {
+      background: rgba(56,189,248,0.05);
+      border-top: 1px solid #1e293b;
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      color: #38bdf8;
+      margin-bottom: 30px;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
+    }
+
+    .tech-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      text-align: center;
+      padding: 30px 20px;
+      transition: .3s;
+      text-decoration: none;
+      color: white;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-10px);
+      background: rgba(56,189,248,.08);
+      border-color: #38bdf8;
+    }
+
+    .tech-card i {
+      font-size: 35px;
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid #1e293b;
+      color: #94a3b8;
+    }
+
+    @media(max-width: 768px){
+      .big-name{font-size:42px;}
+      .floating-clock { width: 100px; height: 100px; bottom: 20px; right: 15px; }
+      .clock-time{font-size:14px;}
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-<div class="container nav-container">
-<div class="logo">Golu Sharma</div>
-<nav>
-<ul class="nav-links">
-<li><a href="./index.html" class="active">Home</a></li>
-<li><a href="./pages/about.html">About</a></li>
-<li><a href="./pages/projects.html">Projects</a></li>
-<li><a href="./pages/resources.html">Resources</a></li>
-<li><a href="./pages/contact.html">Contact</a></li>
-</ul>
-</nav>
-</div>
-</header>
-
-<!-- FLOATING CLOCK -->
-<div class="floating-clock">
-  <div class="clock-inner">
-    <div id="clock-time" class="clock-time"></div>
-    <div id="clock-date" class="clock-date"></div>
+  <!-- Floating Clock -->
+  <div class="floating-clock">
+    <div class="clock-inner">
+      <div id="clock-time" class="clock-time"></div>
+      <div id="clock-date" class="clock-date"></div>
+    </div>
   </div>
-</div>
 
-<!-- HERO -->
-<section class="hero-full">
-<div class="container hero-grid">
+  <!-- HERO -->
+  <section class="hero-full">
+    <div class="container">
+      <p class="tagline">WELCOME TO MY PORTFOLIO</p>
+      <h1 class="big-name">Golu Sharma</h1>
+      <div class="role">Java Backend Developer</div>
+      <p class="intro">
+        I design and develop robust backend architectures using Java, Spring Boot, and SQL.
+        My focus lies in creating scalable APIs and database-driven applications with clean code.
+      </p>
 
-<!-- LEFT -->
-<div>
-<p class="tagline">WELCOME TO MY PORTFOLIO</p>
-<h1 class="big-name">Golu Sharma</h1>
-<div class="role">Backend Developer</div>
+      <ul style="line-height:2;color:#cbd5f5;margin-top:22px;">
+        <li>▸ Java, JDBC & Spring Boot Backend Development</li>
+        <li>▸ REST API Design & Database-Driven Systems</li>
+        <li>▸ Logic Building & Performance Optimization</li>
+        <li>▸ Clear focus on Maintainable Code Architecture</li>
+      </ul>
 
-<p class="intro">
-I am a <b>Java Backend Developer</b> with a strong interest in designing
-scalable server-side systems. My focus lies in building clean, maintainable
-backend architectures that handle real-world data, business logic, and APIs
-efficiently.
-</p>
+      <div class="stats">
+        <div class="stat"><h2>5+</h2><p>Certifications</p></div>
+        <div class="stat"><h2>3+</h2><p>Projects</p></div>
+        <div class="stat"><h2>IT</h2><p>Engineering</p></div>
+      </div>
+    </div>
+  </section>
 
-<p class="intro">
-I enjoy working close to the core of applications — where performance,
-database design, and logic matter more than surface-level UI.
-</p>
+  <!-- Technologies Section -->
+  <section id="tech" class="tech-section">
+    <h2 class="section-title">Core Technologies</h2>
+    <div class="container tech-grid">
+      <a href="./pages/tech/java.html" class="tech-card">
+        <i class="fab fa-java"></i>
+        <h3>Core Java</h3>
+        <p>OOPs, Collections, and Multithreading foundation for backend.</p>
+      </a>
 
-<ul style="line-height:2;color:#cbd5f5;margin-top:22px;">
-<li>▸ Java, JDBC & Spring Boot Backend Development</li>
-<li>▸ REST API Design & Database-Driven Systems</li>
-<li>▸ Multithreading Basics & Performance Awareness</li>
-<li>▸ Logic Building & Structured Problem Solving</li>
-</ul>
+      <a href="./pages/tech/jdbc.html" class="tech-card">
+        <i class="fas fa-plug"></i>
+        <h3>JDBC</h3>
+        <p>Connect and handle databases through optimized SQL queries.</p>
+      </a>
 
-<div class="stats">
-  <div class="stat">
-    <h2>5+</h2>
-    <p>Certifications</p>
-  </div>
-  <div class="stat">
-    <h2>3+</h2>
-    <p>Projects</p>
-  </div>
-  <div class="stat">
-    <h2>IT</h2>
-    <p>Engineering</p>
-  </div>
-</div>
+      <a href="./pages/tech/spring-boot.html" class="tech-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Spring Boot</h3>
+        <p>Framework for building enterprise-level backend systems.</p>
+      </a>
 
-<div class="hero-buttons" style="margin-top:40px;">
-<a href="./pages/projects.html" class="btn primary">View Projects</a>
-<a href="./pages/contact.html" class="btn secondary">Contact Me</a>
-</div>
-</div>
+      <a href="./pages/tech/rest-api.html" class="tech-card">
+        <i class="fas fa-network-wired"></i>
+        <h3>REST APIs</h3>
+        <p>Designing structured API endpoints for web and mobile.</p>
+      </a>
 
-<!-- RIGHT EMPTY BY DESIGN -->
-<div></div>
+      <a href="./pages/tech/sql.html" class="tech-card">
+        <i class="fas fa-database"></i>
+        <h3>SQL Databases</h3>
+        <p>Data schema design, indexing, and backend data management.</p>
+      </a>
+    </div>
+  </section>
 
-</div>
-</section>
+  <footer>
+    <p>© <span id="year"></span> Golu Sharma | Backend Developer</p>
+  </footer>
 
-<footer class="footer">
-<div class="container footer-content">
-<p>© <span id="year"></span> Golu Sharma. All rights reserved.</p>
-<div class="footer-links">
-<a href="https://www.linkedin.com/in/mr-golu-sharma-43a545343" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
-</a>
-<a href="https://github.com/golusharma23" target="_blank">
-<i class="fab fa-github"></i> GitHub
-</a>
-</div>
-</div>
-</footer>
-
-<script>
-function updateClock(){
-  const now=new Date();
-  document.getElementById("clock-time").innerText=
-    now.toLocaleTimeString('en-GB');
-  document.getElementById("clock-date").innerText=
-    now.toLocaleDateString('en-GB',{day:'2-digit',month:'short'}).toUpperCase();
-  document.getElementById("year").innerText=now.getFullYear();
-}
-setInterval(updateClock,1000);
-updateClock();
-</script>
-
+  <script>
+    function updateClock(){
+      const now = new Date();
+      document.getElementById("clock-time").innerText = now.toLocaleTimeString('en-GB');
+      document.getElementById("clock-date").innerText = now.toLocaleDateString('en-GB',{day:'2-digit',month:'short'}).toUpperCase();
+      document.getElementById("year").innerText = now.getFullYear();
+    }
+    setInterval(updateClock,1000);
+    updateClock();
+  </script>
 </body>
 </html>
