@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>JDBC in Backend Systems | Golu Sharma</title>
+
 <meta name="description"
-content="Understand how JDBC is used in backend development to connect Java applications with databases.">
+content="Learn how JDBC works in backend development. Understand database connectivity, query execution, and transaction handling in Java backend systems.">
 
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
@@ -12,53 +13,153 @@ content="Understand how JDBC is used in backend development to connect Java appl
 <body>
 
 <header class="navbar">
-<div class="container nav-container">
-<div class="logo">Golu Sharma</div>
-<nav>
-<ul class="nav-links">
-<li><a href="../../index.html">Home</a></li>
-<li><a href="../resources.html">Resources</a></li>
-</ul>
-</nav>
-</div>
+  <div class="container nav-container">
+    <div class="logo">Golu Sharma</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-<div class="container hero-content">
+  <div class="container hero-content">
 
-<h1>JDBC – Java Database Connectivity</h1>
+    <h1>JDBC – Java Database Connectivity</h1>
 
-<p class="intro">
-JDBC allows backend applications to communicate with relational databases.
-</p>
+    <p class="intro">
+      JDBC (Java Database Connectivity) is the core technology that allows
+      Java backend applications to communicate directly with relational databases.
+      Every serious backend system that works with data relies on JDBC concepts,
+      either directly or indirectly.
+    </p>
 
-<h2>Backend usage of JDBC</h2>
-<ul>
-<li>Executing SQL queries</li>
-<li>Reading and writing data</li>
-<li>Transaction handling</li>
-</ul>
+    <h2>Why JDBC exists in backend systems</h2>
+    <p>
+      Backend applications are responsible for storing, reading, updating,
+      and managing data. JDBC provides a standard way for Java applications
+      to connect with databases like MySQL, PostgreSQL, Oracle, etc.
+    </p>
 
-<h2>What I understand in JDBC</h2>
-<ul>
-<li>DriverManager & Connections</li>
-<li>PreparedStatement</li>
-<li>ResultSet handling</li>
-<li>Basic transaction flow</li>
-</ul>
+    <ul>
+      <li>Connect Java code with databases</li>
+      <li>Execute SQL queries safely</li>
+      <li>Fetch and process result data</li>
+      <li>Control transactions and consistency</li>
+    </ul>
 
-<h2>Why JDBC knowledge is important</h2>
-<p>
-Even ORM frameworks internally rely on JDBC concepts.
-</p>
+    <h2>How JDBC works (Backend Flow)</h2>
+    <p>
+      In a typical backend application, JDBC follows a clear step-by-step flow:
+    </p>
 
-</div>
+    <ol>
+      <li>Load the database driver</li>
+      <li>Create a database connection</li>
+      <li>Prepare SQL statements</li>
+      <li>Execute queries or updates</li>
+      <li>Process result data</li>
+      <li>Close resources properly</li>
+    </ol>
+
+    <h2>Core JDBC Components</h2>
+
+    <h3>1. DriverManager</h3>
+    <p>
+      DriverManager is responsible for managing database drivers and
+      establishing connections between Java applications and databases.
+    </p>
+
+    <h3>2. Connection</h3>
+    <p>
+      A Connection represents an active session with the database.
+      All SQL operations are performed using this connection.
+    </p>
+
+    <h3>3. Statement & PreparedStatement</h3>
+    <p>
+      PreparedStatement is preferred in backend systems because it:
+    </p>
+    <ul>
+      <li>Prevents SQL Injection</li>
+      <li>Improves performance</li>
+      <li>Makes code more maintainable</li>
+    </ul>
+
+    <h3>4. ResultSet</h3>
+    <p>
+      ResultSet holds the data returned from SELECT queries.
+      Backend logic reads this data and converts it into objects or responses.
+    </p>
+
+    <h2>Transaction Handling in JDBC</h2>
+    <p>
+      In real backend systems, multiple database operations must succeed or fail together.
+      JDBC provides transaction control using:
+    </p>
+
+    <ul>
+      <li>setAutoCommit(false)</li>
+      <li>commit()</li>
+      <li>rollback()</li>
+    </ul>
+
+    <p>
+      This ensures data consistency in scenarios like payments,
+      user registrations, or multi-step updates.
+    </p>
+
+    <h2>Where JDBC fits in modern backend development</h2>
+    <p>
+      Even though frameworks like Spring Boot and Hibernate are widely used,
+      they are internally built on top of JDBC.
+      Understanding JDBC gives backend developers clarity about:
+    </p>
+
+    <ul>
+      <li>How ORM frameworks work internally</li>
+      <li>Database performance issues</li>
+      <li>Connection pooling concepts</li>
+      <li>Error handling at data layer</li>
+    </ul>
+
+    <h2>My practical understanding of JDBC</h2>
+    <p>
+      I understand JDBC from a backend perspective, including:
+    </p>
+
+    <ul>
+      <li>Writing parameterized queries</li>
+      <li>Handling database connections safely</li>
+      <li>Reading and mapping ResultSet data</li>
+      <li>Basic transaction flow</li>
+      <li>Using JDBC as the foundation for higher-level frameworks</li>
+    </ul>
+
+    <h2>JDBC Roadmap for Backend Developers</h2>
+    <ol>
+      <li>Learn SQL fundamentals</li>
+      <li>Understand JDBC core classes</li>
+      <li>Practice CRUD operations</li>
+      <li>Learn transaction management</li>
+      <li>Move to frameworks like Spring JDBC / JPA</li>
+    </ol>
+
+    <p class="intro">
+      JDBC is not outdated — it is the backbone of Java backend development.
+      Strong JDBC knowledge makes every backend developer more confident
+      and effective.
+    </p>
+
+  </div>
 </section>
 
 <footer class="footer">
-<div class="container footer-content">
-<p>© Golu Sharma</p>
-</div>
+  <div class="container footer-content">
+    <p>© Golu Sharma</p>
+  </div>
 </footer>
 
 </body>
