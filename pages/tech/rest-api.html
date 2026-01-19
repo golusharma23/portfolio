@@ -2,21 +2,126 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>REST APIs in Backend | Golu Sharma</title>
+<title>REST API Backend Development | Golu Sharma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
 <meta name="description"
-content="REST API design principles and backend usage explained clearly.">
+content="REST API backend development explained with architecture, HTTP methods, request-response flow, validation, and real-world usage.">
+<meta name="keywords"
+content="REST API, Backend Development, Java Backend, HTTP, API Design, Golu Sharma">
 
 <link rel="stylesheet" href="../../assets/css/style.css">
+
+<style>
+.tech-wrapper{
+  max-width:1000px;
+  margin:auto;
+}
+.tech-card{
+  background:rgba(2,6,23,0.9);
+  border:1px solid #1e293b;
+  border-radius:22px;
+  padding:45px;
+}
+.tech-title{
+  font-size:40px;
+  margin-bottom:10px;
+}
+.tech-subtitle{
+  color:#38bdf8;
+  font-size:18px;
+  margin-bottom:30px;
+}
+.tech-text{
+  color:#cbd5f5;
+  line-height:1.9;
+  margin-bottom:18px;
+}
+.highlight{
+  color:#38bdf8;
+  font-weight:600;
+}
+.divider{
+  margin:40px 0;
+  border:0;
+  border-top:1px solid #1e293b;
+}
+
+/* flow box */
+.flow-box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid #1e293b;
+  border-radius:14px;
+  padding:25px;
+  font-family:monospace;
+  color:#e2e8f0;
+  margin-top:15px;
+}
+
+/* grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-top:25px;
+}
+.box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:25px;
+  transition:.3s;
+}
+.box:hover{
+  border-color:#38bdf8;
+  transform:translateY(-6px);
+}
+.box h4{
+  margin:0 0 10px;
+  color:#38bdf8;
+}
+
+/* roadmap */
+.roadmap-step{
+  display:flex;
+  gap:18px;
+  margin-bottom:28px;
+}
+.step-dot{
+  width:12px;
+  height:12px;
+  background:#38bdf8;
+  border-radius:50%;
+  margin-top:6px;
+}
+.step-content h4{
+  margin:0 0 6px;
+  color:#e2e8f0;
+}
+.step-content p{
+  margin:0;
+  color:#94a3b8;
+  line-height:1.7;
+}
+
+@media(max-width:768px){
+  .tech-card{padding:30px;}
+  .tech-title{font-size:30px;}
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-container">
 <div class="logo">Golu Sharma</div>
 <nav>
 <ul class="nav-links">
 <li><a href="../../index.html">Home</a></li>
+<li><a href="../projects.html">Projects</a></li>
 <li><a href="../resources.html">Resources</a></li>
 </ul>
 </nav>
@@ -24,32 +129,159 @@ content="REST API design principles and backend usage explained clearly.">
 </header>
 
 <section class="hero">
-<div class="container hero-content">
+<div class="container tech-wrapper">
+<div class="tech-card">
 
-<h1>REST APIs</h1>
+<h1 class="tech-title">REST API Backend Development</h1>
+<div class="tech-subtitle">Communication Layer Between Client & Server</div>
 
-<p class="intro">
-REST APIs allow backend systems to communicate with frontend or mobile apps.
+<p class="tech-text">
+<span class="highlight">REST (Representational State Transfer)</span> APIs allow
+frontend or mobile applications to communicate with backend systems
+using standard HTTP protocols.
 </p>
 
-<h2>Backend responsibilities</h2>
-<ul>
-<li>Request handling</li>
-<li>Response formatting</li>
-<li>Data validation</li>
-</ul>
-
-<h2>Why REST matters</h2>
-<p>
-Most modern systems depend on REST-based backend communication.
+<p class="tech-text">
+As a backend developer, REST APIs are the
+<span class="highlight">primary interface</span> through which
+clients interact with server-side logic and databases.
 </p>
 
+<hr class="divider">
+
+<h2 class="highlight">Typical REST API Flow</h2>
+<div class="flow-box">
+Client → HTTP Request → Controller → Service → Database → HTTP Response → Client
+</div>
+
+<p class="tech-text">
+Each API request triggers backend logic, performs validations,
+processes data, and sends structured responses.
+</p>
+
+<hr class="divider">
+
+<h2 class="highlight">Backend Responsibilities in REST APIs</h2>
+<div class="grid">
+  <div class="box">
+    <h4>Request Handling</h4>
+    <p>
+    Accepting HTTP requests and mapping them to correct endpoints.
+    </p>
+  </div>
+  <div class="box">
+    <h4>Validation</h4>
+    <p>
+    Ensuring request data is valid before processing.
+    </p>
+  </div>
+  <div class="box">
+    <h4>Business Logic</h4>
+    <p>
+    Executing core application rules and workflows.
+    </p>
+  </div>
+  <div class="box">
+    <h4>Response Formatting</h4>
+    <p>
+    Sending structured JSON responses with proper status codes.
+    </p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<h2 class="highlight">Common HTTP Methods</h2>
+<div class="grid">
+  <div class="box">
+    <h4>GET</h4>
+    <p>Fetch data from backend</p>
+  </div>
+  <div class="box">
+    <h4>POST</h4>
+    <p>Create new data</p>
+  </div>
+  <div class="box">
+    <h4>PUT / PATCH</h4>
+    <p>Update existing data</p>
+  </div>
+  <div class="box">
+    <h4>DELETE</h4>
+    <p>Remove data from system</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<h2 class="highlight">Why REST APIs Are Important</h2>
+<p class="tech-text">
+Modern applications are distributed.
+REST APIs allow backend systems to serve
+<span class="highlight">multiple clients</span> —
+web apps, mobile apps, and third-party services —
+using a single backend codebase.
+</p>
+
+<hr class="divider">
+
+<h2 class="highlight">REST API Learning Roadmap</h2>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 1: HTTP Basics</h4>
+    <p>Methods, headers, status codes, and request-response cycle.</p>
+  </div>
+</div>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 2: REST Principles</h4>
+    <p>Statelessness, resource-based URLs, and proper methods.</p>
+  </div>
+</div>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 3: Backend Integration</h4>
+    <p>Connecting APIs with services and databases.</p>
+  </div>
+</div>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 4: Validation & Error Handling</h4>
+    <p>Handling invalid requests gracefully.</p>
+  </div>
+</div>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 5: Secure APIs</h4>
+    <p>Authentication, authorization, and safe data exposure.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<h2 class="highlight">Backend Developer Perspective</h2>
+<p class="tech-text">
+REST API design reflects a developer’s understanding of
+<span class="highlight">architecture, scalability, and system design</span>.
+Well-designed APIs make systems reliable and easy to extend.
+</p>
+
+</div>
 </div>
 </section>
 
 <footer class="footer">
 <div class="container footer-content">
-<p>© Golu Sharma</p>
+<p>© 2026 Golu Sharma. All rights reserved.</p>
 </div>
 </footer>
 
