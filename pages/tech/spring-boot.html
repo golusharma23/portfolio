@@ -3,20 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <title>Spring Boot Backend Development | Golu Sharma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
 <meta name="description"
-content="Spring Boot backend development for REST APIs, controllers, services, and database integration.">
+content="Spring Boot backend development explained with real-world architecture, REST APIs, services, repositories, and database integration.">
+<meta name="keywords"
+content="Spring Boot, Backend Development, Java Backend, REST API, Golu Sharma">
 
 <link rel="stylesheet" href="../../assets/css/style.css">
+
+<style>
+.tech-wrapper{
+  max-width:1000px;
+  margin:auto;
+}
+.tech-card{
+  background:rgba(2,6,23,0.9);
+  border:1px solid #1e293b;
+  border-radius:22px;
+  padding:45px;
+}
+.tech-title{
+  font-size:40px;
+  margin-bottom:10px;
+}
+.tech-subtitle{
+  color:#38bdf8;
+  font-size:18px;
+  margin-bottom:30px;
+}
+.tech-text{
+  color:#cbd5f5;
+  line-height:1.9;
+  margin-bottom:18px;
+}
+.highlight{
+  color:#38bdf8;
+  font-weight:600;
+}
+.divider{
+  margin:40px 0;
+  border:0;
+  border-top:1px solid #1e293b;
+}
+
+/* flow box */
+.flow-box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid #1e293b;
+  border-radius:14px;
+  padding:25px;
+  font-family:monospace;
+  color:#e2e8f0;
+  margin-top:15px;
+}
+
+/* grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-top:25px;
+}
+.box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:25px;
+  transition:.3s;
+}
+.box:hover{
+  border-color:#38bdf8;
+  transform:translateY(-6px);
+}
+.box h4{
+  margin:0 0 10px;
+  color:#38bdf8;
+}
+
+/* roadmap */
+.roadmap-step{
+  display:flex;
+  gap:18px;
+  margin-bottom:28px;
+}
+.step-dot{
+  width:12px;
+  height:12px;
+  background:#38bdf8;
+  border-radius:50%;
+  margin-top:6px;
+}
+.step-content h4{
+  margin:0 0 6px;
+  color:#e2e8f0;
+}
+.step-content p{
+  margin:0;
+  color:#94a3b8;
+  line-height:1.7;
+}
+
+@media(max-width:768px){
+  .tech-card{padding:30px;}
+  .tech-title{font-size:30px;}
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-container">
 <div class="logo">Golu Sharma</div>
 <nav>
 <ul class="nav-links">
 <li><a href="../../index.html">Home</a></li>
+<li><a href="../projects.html">Projects</a></li>
 <li><a href="../resources.html">Resources</a></li>
 </ul>
 </nav>
@@ -24,37 +129,144 @@ content="Spring Boot backend development for REST APIs, controllers, services, a
 </header>
 
 <section class="hero">
-<div class="container hero-content">
+<div class="container tech-wrapper">
+<div class="tech-card">
 
-<h1>Spring Boot for Backend Systems</h1>
+<h1 class="tech-title">Spring Boot Backend Development</h1>
+<div class="tech-subtitle">Framework for Building Scalable Java Backend Systems</div>
 
-<p class="intro">
-Spring Boot simplifies backend application development using Java.
+<p class="tech-text">
+<span class="highlight">Spring Boot</span> is a Java-based framework used to build
+production-ready backend applications with minimal configuration.
+It is widely used to create REST APIs, microservices, and data-driven systems.
 </p>
 
-<h2>Backend flow</h2>
-<p>
+<p class="tech-text">
+As a backend developer, Spring Boot helps me focus on
+<span class="highlight">business logic, architecture, and data flow</span>
+instead of boilerplate setup.
+</p>
+
+<hr class="divider">
+
+<h2 class="highlight">Typical Backend Flow</h2>
+<div class="flow-box">
 Client → Controller → Service → Repository → Database
+</div>
+
+<p class="tech-text">
+This layered architecture keeps the codebase clean, testable,
+and easy to maintain as the application grows.
 </p>
 
-<h2>What I use Spring Boot for</h2>
-<ul>
-<li>REST API creation</li>
-<li>Layered backend architecture</li>
-<li>Business logic separation</li>
-</ul>
+<hr class="divider">
 
-<h2>Why Spring Boot is popular</h2>
-<p>
-It allows backend developers to focus on logic instead of configuration.
+<h2 class="highlight">How I Use Spring Boot</h2>
+<div class="grid">
+  <div class="box">
+    <h4>Controllers</h4>
+    <p>
+    Handle HTTP requests and responses using REST principles.
+    </p>
+  </div>
+  <div class="box">
+    <h4>Service Layer</h4>
+    <p>
+    Contains business logic and ensures separation of concerns.
+    </p>
+  </div>
+  <div class="box">
+    <h4>Repository Layer</h4>
+    <p>
+    Manages database operations using JPA or JDBC.
+    </p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<h2 class="highlight">Why Spring Boot is Powerful</h2>
+<div class="grid">
+  <div class="box">
+    <h4>Auto Configuration</h4>
+    <p>
+    Reduces manual setup and speeds up development.
+    </p>
+  </div>
+  <div class="box">
+    <h4>Production Ready</h4>
+    <p>
+    Built-in support for logging, monitoring, and security.
+    </p>
+  </div>
+  <div class="box">
+    <h4>Industry Standard</h4>
+    <p>
+    Used widely in startups and enterprise backend systems.
+    </p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<h2 class="highlight">Spring Boot Learning Roadmap</h2>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 1: Core Java + OOP</h4>
+    <p>Understanding classes, objects, interfaces, and logic flow.</p>
+  </div>
+</div>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 2: REST Basics</h4>
+    <p>HTTP methods, status codes, request & response structure.</p>
+  </div>
+</div>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 3: Spring Boot Layers</h4>
+    <p>Controller → Service → Repository architecture.</p>
+  </div>
+</div>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 4: Database Integration</h4>
+    <p>Using JPA/JDBC to connect backend with databases.</p>
+  </div>
+</div>
+
+<div class="roadmap-step">
+  <div class="step-dot"></div>
+  <div class="step-content">
+    <h4>Step 5: Real Projects</h4>
+    <p>Building APIs used by frontend or mobile applications.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<h2 class="highlight">Why This Matters for Backend Roles</h2>
+<p class="tech-text">
+Spring Boot knowledge shows that a developer understands
+<span class="highlight">real backend engineering</span> —
+from request handling to database persistence and system scalability.
 </p>
 
+</div>
 </div>
 </section>
 
 <footer class="footer">
 <div class="container footer-content">
-<p>© Golu Sharma</p>
+<p>© 2026 Golu Sharma. All rights reserved.</p>
 </div>
 </footer>
 
