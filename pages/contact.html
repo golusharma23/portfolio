@@ -1,156 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact | Golu Sharma</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Contact | Golu Sharma – Backend Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <meta name="description" content="Contact Golu Sharma – Backend Developer. Reach out for internships, backend projects, or professional collaboration.">
+<!-- SEO -->
+<meta name="description"
+content="Contact Golu Sharma – Backend Developer. Reach out for internships, backend projects, or professional collaboration.">
+<meta name="keywords"
+content="Contact Golu Sharma, Backend Developer, Java Developer, Internship">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+.contact-wrapper{
+  max-width:1000px;
+  margin:auto;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  margin-top:50px;
+}
+.contact-card{
+  background:rgba(2,6,23,0.9);
+  border:1px solid #1e293b;
+  border-radius:22px;
+  padding:40px;
+}
+.contact-title{
+  font-size:42px;
+  margin-bottom:10px;
+}
+.contact-subtitle{
+  color:#38bdf8;
+  font-size:18px;
+  margin-bottom:25px;
+}
+.contact-text{
+  color:#cbd5f5;
+  line-height:1.9;
+}
+.info-item{
+  margin-top:25px;
+}
+.info-item i{
+  color:#38bdf8;
+  margin-right:10px;
+}
+.info-item a{
+  color:#38bdf8;
+  text-decoration:none;
+}
+.info-item a:hover{
+  text-decoration:underline;
+}
+
+/* form */
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:16px;
+  border-radius:10px;
+  border:1px solid #1e293b;
+  background:#020617;
+  color:white;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  border-color:#38bdf8;
+}
+.submit-btn{
+  width:100%;
+  padding:14px;
+  background:#38bdf8;
+  color:#020617;
+  font-weight:700;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  transition:.3s;
+}
+.submit-btn:hover{
+  background:#0ea5e9;
+}
+
+/* highlight strip */
+.highlight-strip{
+  margin-top:40px;
+  padding:25px;
+  border-radius:16px;
+  border:1px solid #1e293b;
+  background:rgba(56,189,248,0.08);
+  color:#e2e8f0;
+  text-align:center;
+}
+
+@media(max-width:900px){
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+  .contact-title{
+    font-size:32px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
 <header class="navbar">
-    <div class="container nav-container">
-        <div class="logo">Golu Sharma</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="certificates.html">Certificates</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<div class="container nav-container">
+<div class="logo">Golu Sharma</div>
+<nav>
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="certificates.html">Certificates</a></li>
+<li><a href="contact.html" class="active">Contact</a></li>
+</ul>
+</nav>
+</div>
 </header>
 
-<!-- ================= CONTACT HERO ================= -->
 <section class="hero">
-    <div class="container hero-content" style="max-width:900px;">
+<div class="container contact-wrapper">
 
-        <h1 style="font-size:48px;">Let’s <span style="color:#38bdf8;">Connect</span></h1>
+<h1 class="contact-title">
+Let’s <span style="color:#38bdf8;">Connect</span>
+</h1>
+<div class="contact-subtitle">
+Backend · Internships · Collaboration
+</div>
 
-        <p class="intro" style="max-width:700px;">
-            Interested in backend development, internships, collaborations,
-            or just want to discuss tech?  
-            Fill out the form below — your message comes directly to me.
-        </p>
+<p class="contact-text" style="max-width:700px;">
+If you’re interested in backend development, internships, projects,
+or technical discussion — feel free to reach out.
+I prefer clear and meaningful conversations.
+</p>
 
-        <!-- CONTACT GRID -->
-        <div style="
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            gap:40px;
-            margin-top:50px;
-        ">
+<div class="contact-grid">
 
-            <!-- LEFT INFO -->
-            <div>
-                <h2 style="margin-bottom:20px;">Contact Info</h2>
+<!-- LEFT -->
+<div class="contact-card">
+<h2>Contact Information</h2>
 
-                <p class="intro">
-                    I usually respond within 24 hours.  
-                    Please keep your message clear and professional.
-                </p>
+<p class="contact-text">
+I usually respond within <strong>24 hours</strong>.
+For best results, mention context clearly.
+</p>
 
-                <p style="margin-top:25px;">
-                    <i class="fas fa-envelope" style="color:#38bdf8;"></i>
-                    <strong>Email:</strong><br>
-                    golu45016@gmail.com
-                </p>
+<div class="info-item">
+<i class="fas fa-envelope"></i>
+<strong>Email</strong><br>
+<a href="mailto:golu45016@gmail.com">golu45016@gmail.com</a>
+</div>
 
-                <p style="margin-top:15px;">
-                    <i class="fab fa-linkedin" style="color:#38bdf8;"></i>
-                    <strong>LinkedIn:</strong><br>
-                    <a href="https://www.linkedin.com/in/mr-golu-sharma-43a545343"
-                       target="_blank"
-                       style="color:#38bdf8;">
-                        View Profile
-                    </a>
-                </p>
+<div class="info-item">
+<i class="fab fa-linkedin"></i>
+<strong>LinkedIn</strong><br>
+<a href="https://www.linkedin.com/in/mr-golu-sharma-43a545343" target="_blank">
+linkedin.com/in/mr-golu-sharma
+</a>
+</div>
 
-                <p style="margin-top:15px;">
-                    <i class="fab fa-github" style="color:#38bdf8;"></i>
-                    <strong>GitHub:</strong><br>
-                    <a href="https://github.com/golusharma23"
-                       target="_blank"
-                       style="color:#38bdf8;">
-                        github.com/golusharma23
-                    </a>
-                </p>
-            </div>
+<div class="info-item">
+<i class="fab fa-github"></i>
+<strong>GitHub</strong><br>
+<a href="https://github.com/golusharma23" target="_blank">
+github.com/golusharma23
+</a>
+</div>
 
-            <!-- RIGHT FORM -->
-            <div style="
-                background:rgba(2,6,23,0.8);
-                padding:30px;
-                border-radius:16px;
-                border:1px solid #1e293b;
-                box-shadow:0 15px 40px rgba(0,0,0,0.6);
-            ">
-                <form
-                    action="https://formspree.io/f/xnjngpaj"
-                    method="POST"
-                >
+<div class="highlight-strip">
+Prefer backend-related queries, architecture discussions,
+or internship opportunities.
+</div>
+</div>
 
-                    <input type="hidden" name="date_time" id="dateTime">
+<!-- RIGHT -->
+<div class="contact-card">
+<h2>Send a Message</h2>
 
-                    <input type="text"
-                           name="name"
-                           placeholder="Your Name"
-                           required
-                           style="width:100%; padding:12px; margin-bottom:15px;">
+<form class="contact-form"
+action="https://formspree.io/f/xnjngpaj"
+method="POST">
 
-                    <input type="email"
-                           name="email"
-                           placeholder="Your Email"
-                           required
-                           style="width:100%; padding:12px; margin-bottom:15px;">
+<input type="hidden" name="date_time" id="dateTime">
 
-                    <input type="text"
-                           name="role"
-                           placeholder="Your Role / Organization"
-                           style="width:100%; padding:12px; margin-bottom:15px;">
+<input type="text"
+name="name"
+placeholder="Your Name"
+required>
 
-                    <textarea name="message"
-                              placeholder="Your Message"
-                              rows="4"
-                              required
-                              style="width:100%; padding:12px; margin-bottom:20px;"></textarea>
+<input type="email"
+name="email"
+placeholder="Your Email"
+required>
 
-                    <button type="submit" class="btn primary" style="width:100%;">
-                        Send Message
-                    </button>
-                </form>
-            </div>
+<input type="text"
+name="role"
+placeholder="Your Role / Organization">
 
-        </div>
-    </div>
+<textarea name="message"
+rows="4"
+placeholder="Write your message clearly..."
+required></textarea>
+
+<button type="submit" class="submit-btn">
+Send Message
+</button>
+
+</form>
+</div>
+
+</div>
+</div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="footer">
-    <div class="container footer-content">
-        <p>© 2026 Golu Sharma. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="mailto:golu45016@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/mr-golu-sharma-43a545343" target="_blank">LinkedIn</a>
-            <a href="https://github.com/golusharma23" target="_blank">GitHub</a>
-        </div>
-    </div>
+<div class="container footer-content">
+<p>© 2026 Golu Sharma. All rights reserved.</p>
+<div class="footer-links">
+<a href="mailto:golu45016@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/mr-golu-sharma-43a545343" target="_blank">LinkedIn</a>
+<a href="https://github.com/golusharma23" target="_blank">GitHub</a>
+</div>
+</div>
 </footer>
 
 <script>
-    document.getElementById("dateTime").value =
-        new Date().toLocaleString();
+document.getElementById("dateTime").value =
+new Date().toLocaleString();
 </script>
 
 </body>
