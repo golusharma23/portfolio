@@ -3,14 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <title>Core Java for Backend Development | Golu Sharma</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description"
-content="Learn how Core Java is used in backend development including OOP, collections, and multithreading concepts.">
+content="Complete Core Java revision for backend development covering OOP, Collections, Multithreading, Exception Handling, and backend logic with references.">
+
+<meta name="keywords"
+content="Core Java Backend, Java OOP, Java Collections, Multithreading, Java Backend Roadmap">
 
 <link rel="stylesheet" href="../../assets/css/style.css">
+
+<style>
+.content-box{
+  max-width:950px;
+  margin:auto;
+}
+.section-block{
+  margin-top:40px;
+}
+.section-block h2{
+  color:#38bdf8;
+  margin-bottom:12px;
+}
+.section-block ul{
+  line-height:2;
+  color:#cbd5f5;
+}
+.section-block a{
+  color:#38bdf8;
+  text-decoration:none;
+}
+.section-block a:hover{
+  text-decoration:underline;
+}
+.note-box{
+  margin-top:25px;
+  padding:22px;
+  border-radius:14px;
+  background:rgba(56,189,248,0.08);
+  border:1px solid #1e293b;
+}
+.roadmap-step{
+  border-left:3px solid #38bdf8;
+  padding-left:18px;
+  margin-top:20px;
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
 <div class="container nav-container">
 <div class="logo">Golu Sharma</div>
@@ -24,43 +68,143 @@ content="Learn how Core Java is used in backend development including OOP, colle
 </header>
 
 <section class="hero">
-<div class="container hero-content">
+<div class="container hero-content content-box">
 
-<h1>Core Java in Backend Development</h1>
+<h1>Core Java – Backend Developer Revision</h1>
 
 <p class="intro">
-Core Java is the foundation of backend development. Every backend system
-starts with strong Java fundamentals.
-</p>
-
-<h2>Where Core Java is used</h2>
-<ul>
-<li>Business logic implementation</li>
-<li>Request processing</li>
-<li>Data validation</li>
-<li>Thread management</li>
-</ul>
-
-<h2>Concepts I work with</h2>
-<ul>
-<li>OOP (Encapsulation, Inheritance, Polymorphism)</li>
-<li>Collections Framework</li>
-<li>Exception Handling</li>
-<li>Multithreading basics</li>
-</ul>
-
-<h2>Why Core Java matters</h2>
-<p>
+Core Java is the foundation of every backend system.
 Frameworks change, but backend logic always depends on Java fundamentals.
-Strong Core Java means stable backend systems.
+This page is designed for <strong>quick revision + backend clarity</strong>.
 </p>
+
+<div class="note-box">
+If you understand everything on this page,  
+you are ready to move confidently into Spring Boot and real backend systems.
+</div>
+
+<!-- ================= OOP ================= -->
+<div class="section-block">
+<h2>1. Object-Oriented Programming (OOP)</h2>
+<ul>
+<li>Encapsulation – data hiding using private variables & getters/setters</li>
+<li>Inheritance – code reuse and backend hierarchy design</li>
+<li>Polymorphism – method overriding in service layers</li>
+<li>Abstraction – interfaces & abstract classes for clean architecture</li>
+</ul>
+<p>
+🔗 Reference:
+<a href="https://docs.oracle.com/javase/tutorial/java/concepts/" target="_blank">
+Oracle OOP Concepts
+</a>
+</p>
+</div>
+
+<!-- ================= COLLECTIONS ================= -->
+<div class="section-block">
+<h2>2. Collections Framework</h2>
+<ul>
+<li>List – ArrayList, LinkedList (ordered data handling)</li>
+<li>Set – HashSet (unique data)</li>
+<li>Map – HashMap, LinkedHashMap (key-value backend logic)</li>
+<li>Iteration, performance awareness, memory usage</li>
+</ul>
+<p>
+🔗 Reference:
+<a href="https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html" target="_blank">
+Java Collections Overview
+</a>
+</p>
+</div>
+
+<!-- ================= EXCEPTION ================= -->
+<div class="section-block">
+<h2>3. Exception Handling</h2>
+<ul>
+<li>Checked vs Unchecked Exceptions</li>
+<li>Try-Catch-Finally blocks</li>
+<li>Custom exceptions for business logic</li>
+<li>Preventing backend crashes</li>
+</ul>
+<p>
+🔗 Reference:
+<a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/" target="_blank">
+Java Exception Handling
+</a>
+</p>
+</div>
+
+<!-- ================= MULTITHREADING ================= -->
+<div class="section-block">
+<h2>4. Multithreading Basics</h2>
+<ul>
+<li>Thread lifecycle</li>
+<li>Runnable vs Thread class</li>
+<li>Synchronized keyword</li>
+<li>Why backend systems need thread safety</li>
+</ul>
+<p>
+🔗 Reference:
+<a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/" target="_blank">
+Java Concurrency
+</a>
+</p>
+</div>
+
+<!-- ================= MEMORY ================= -->
+<div class="section-block">
+<h2>5. Memory Management & JVM Basics</h2>
+<ul>
+<li>Heap vs Stack memory</li>
+<li>Garbage Collection basics</li>
+<li>Object lifecycle awareness</li>
+<li>Why memory leaks affect backend performance</li>
+</ul>
+<p>
+🔗 Reference:
+<a href="https://www.baeldung.com/jvm-memory-structure" target="_blank">
+JVM Memory Structure
+</a>
+</p>
+</div>
+
+<!-- ================= BACKEND ROADMAP ================= -->
+<div class="section-block">
+<h2>Backend-Oriented Java Roadmap</h2>
+
+<div class="roadmap-step">
+<strong>Step 1:</strong> Java syntax + OOP clarity  
+</div>
+
+<div class="roadmap-step">
+<strong>Step 2:</strong> Collections + data handling logic  
+</div>
+
+<div class="roadmap-step">
+<strong>Step 3:</strong> Exception handling + stability  
+</div>
+
+<div class="roadmap-step">
+<strong>Step 4:</strong> Multithreading awareness  
+</div>
+
+<div class="roadmap-step">
+<strong>Step 5:</strong> Move to JDBC → Spring Boot  
+</div>
+</div>
+
+<div class="note-box">
+This page is meant for revision, not memorization.  
+If you can explain these topics in your own words,  
+you are thinking like a backend engineer.
+</div>
 
 </div>
 </section>
 
 <footer class="footer">
 <div class="container footer-content">
-<p>© Golu Sharma</p>
+<p>© 2026 Golu Sharma. All rights reserved.</p>
 </div>
 </footer>
 
