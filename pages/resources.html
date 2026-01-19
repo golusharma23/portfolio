@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Backend Resources | Golu Sharma</title>
+    <title>Backend Resources & Roadmap | Golu Sharma</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="Backend development resources for students. Learn Java backend, JDBC, Multithreading, Spring Boot, REST APIs, and databases with practical explanations.">
-    <meta name="keywords" content="Java backend resources, JDBC tutorial, Java multithreading basics, Spring Boot learning, REST API backend">
+    <meta name="description"
+          content="Complete backend development roadmap and resources by Golu Sharma. Learn Java, JDBC, SQL, REST APIs, Spring Boot with a structured backend learning path.">
+    <meta name="keywords"
+          content="Backend roadmap, Java backend learning, JDBC tutorial, REST API roadmap, Spring Boot resources">
 
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
     <div class="container nav-container">
         <div class="logo">Golu Sharma</div>
@@ -28,87 +31,112 @@
     </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<div class="container hero-content">
+<div class="container hero-content" style="max-width:1000px;">
 
-<h1>Backend Development Resources</h1>
+<h1>Backend Development Roadmap</h1>
 
 <p class="intro">
-This page contains backend development resources created from my own learning journey as a Java backend developer.
-The focus is on fundamentals, clarity, and understanding how backend systems actually work.
+This page represents a <strong>step-by-step backend learning roadmap</strong>
+based on my own journey as a Java backend developer.
+If you are a beginner or intermediate student, follow this order — no confusion.
 </p>
 
-<!-- JAVA -->
-<h2>Java Backend Fundamentals</h2>
-<ul class="intro">
-<li>Object-Oriented Programming (OOP concepts)</li>
-<li>Collections Framework (List, Map, Set)</li>
-<li>Exception Handling & Debugging</li>
-<li>Core Java logic building</li>
-</ul>
+<hr style="margin:40px 0; border-color:#1e293b;">
 
-<!-- JDBC -->
-<h2>JDBC (Java Database Connectivity)</h2>
+<!-- ROADMAP STEP 1 -->
+<h2>Step 1: Core Java Fundamentals</h2>
 <p class="intro">
-JDBC helps Java applications communicate directly with relational databases.
-Understanding JDBC builds a strong base before moving to frameworks like Hibernate and Spring Data JPA.
+Backend development starts with strong Java fundamentals.
+Without Core Java, frameworks will always feel confusing.
 </p>
 <ul class="intro">
-<li>Connecting Java applications to databases</li>
-<li>Executing SQL queries using Java</li>
-<li>PreparedStatement vs Statement</li>
-<li>ResultSet processing</li>
+    <li>OOP (Encapsulation, Inheritance, Polymorphism)</li>
+    <li>Collections Framework (List, Map, Set)</li>
+    <li>Exception Handling</li>
+    <li>Basic Multithreading understanding</li>
 </ul>
+<a href="tech/java.html" class="btn primary">Read Core Java</a>
 
-<!-- MULTITHREADING -->
-<h2>Java Multithreading (Basics)</h2>
+<hr style="margin:50px 0; border-color:#1e293b;">
+
+<!-- ROADMAP STEP 2 -->
+<h2>Step 2: JDBC & Database Connectivity</h2>
 <p class="intro">
-Multithreading allows applications to perform multiple tasks simultaneously.
-This concept is important for understanding performance, concurrency, and real-world backend behavior.
+JDBC teaches how Java talks directly to databases.
+This step builds database confidence before Spring Boot.
 </p>
 <ul class="intro">
-<li>Thread lifecycle in Java</li>
-<li>Runnable interface & Thread class</li>
-<li>Basic synchronization concepts</li>
-<li>Why multithreading matters in backend systems</li>
+    <li>Database connections using JDBC</li>
+    <li>PreparedStatement & ResultSet</li>
+    <li>Basic transaction flow</li>
 </ul>
+<a href="tech/jdbc.html" class="btn primary">Read JDBC</a>
 
-<!-- SPRING -->
-<h2>Spring Boot & REST APIs</h2>
-<ul class="intro">
-<li>Controller, Service, Repository layers</li>
-<li>REST API principles (GET, POST, PUT, DELETE)</li>
-<li>Spring Boot project structure</li>
-<li>CRUD APIs using Spring Data JPA</li>
-</ul>
+<hr style="margin:50px 0; border-color:#1e293b;">
 
-<!-- DATABASE -->
-<h2>Database & SQL Fundamentals</h2>
+<!-- ROADMAP STEP 3 -->
+<h2>Step 3: SQL & Database Design</h2>
+<p class="intro">
+Every backend system depends on database design and query efficiency.
+</p>
 <ul class="intro">
-<li>Tables, rows, and relationships</li>
-<li>Primary keys and foreign keys</li>
-<li>Normalization basics</li>
-<li>JPA & Hibernate overview</li>
+    <li>SQL queries (SELECT, INSERT, UPDATE, DELETE)</li>
+    <li>Primary & Foreign Keys</li>
+    <li>Normalization basics</li>
 </ul>
+<a href="tech/sql.html" class="btn primary">Read SQL</a>
+
+<hr style="margin:50px 0; border-color:#1e293b;">
+
+<!-- ROADMAP STEP 4 -->
+<h2>Step 4: REST APIs & Backend Communication</h2>
+<p class="intro">
+REST APIs define how frontend and backend communicate.
+This is the heart of backend development.
+</p>
+<ul class="intro">
+    <li>HTTP methods (GET, POST, PUT, DELETE)</li>
+    <li>Request–Response lifecycle</li>
+    <li>Status codes & validation</li>
+</ul>
+<a href="tech/rest-api.html" class="btn primary">Read REST APIs</a>
+
+<hr style="margin:50px 0; border-color:#1e293b;">
+
+<!-- ROADMAP STEP 5 -->
+<h2>Step 5: Spring Boot Framework</h2>
+<p class="intro">
+Spring Boot helps build real-world backend systems faster
+using layered architecture.
+</p>
+<ul class="intro">
+    <li>Controller → Service → Repository flow</li>
+    <li>Spring Data JPA</li>
+    <li>Clean backend architecture</li>
+</ul>
+<a href="tech/spring-boot.html" class="btn primary">Read Spring Boot</a>
+
+<hr style="margin:50px 0; border-color:#1e293b;">
 
 <!-- THINKING -->
 <h2>Backend Developer Thinking</h2>
 <ul class="intro">
-<li>Request–Response lifecycle</li>
-<li>Layered architecture importance</li>
-<li>Clean code & maintainability</li>
-<li>Solving problems through logic</li>
+    <li>Understanding how requests flow inside the server</li>
+    <li>Writing maintainable and readable code</li>
+    <li>Solving problems logically instead of memorizing</li>
 </ul>
 
-<h2>Learning Philosophy</h2>
+<h2>Next Step</h2>
 <p class="intro">
-I focus on understanding fundamentals before moving to advanced frameworks.
-Building projects and learning from mistakes is my primary way of improving backend skills.
+After completing this roadmap, focus on building backend projects.
+Real learning happens when things break and you fix them.
 </p>
 
 <div class="hero-buttons" style="margin-top:30px;">
-<a href="projects.html" class="btn primary">View Projects</a>
-<a href="contact.html" class="btn secondary">Contact Me</a>
+    <a href="projects.html" class="btn primary">View Backend Projects</a>
+    <a href="contact.html" class="btn secondary">Contact Me</a>
 </div>
 
 </div>
